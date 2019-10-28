@@ -1,0 +1,11 @@
+history
+prop-types
+react-router-dom
+styled-components
+polished (trabalhar com cores)
+@rocketseat/unform
+yup
+redux redux-saga react-redux reactotron-redux reactotron-redux-saga immer
+axios
+redux-persist
+react-toastify (erros)
