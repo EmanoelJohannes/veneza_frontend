@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 
 import { Wrapper } from './styles';
 
+import Sidebar from '../../../components/Sidebar';
+
+
 export default function DefaultLayout( {children} ) {
   return (
     <Wrapper> 
-       {children}
+      <Sidebar />
+      {children}
+      
     </Wrapper>
   );
 }
