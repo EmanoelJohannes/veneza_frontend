@@ -8,6 +8,10 @@ import SignUp from '../pages/SignUp';
 import Profile from '../pages/Profile';
 import Dashboard from '../pages/Dashboard';
 
+//Event
+import CreateEvent from '../pages/Event/CreateEvent';
+
+
 export default function Routes() {
     return (
         <Switch>
@@ -18,6 +22,7 @@ export default function Routes() {
             <Route path="/dashboard" component={Dashboard} isPrivate></Route>
             <Route path="/profile" component={Profile} isPrivate></Route>
 
+            <Route path="/createEvent" component={CreateEvent} isPrivate></Route>
             <Route path="/" component={() => <h1>404 not found</h1>} />
         </Switch>
     );

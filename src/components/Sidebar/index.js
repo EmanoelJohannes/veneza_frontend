@@ -1,27 +1,44 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-import { Container, Logout, Nav } from './styles';
-import Alert from 'react-bootstrap/Alert';
+import { Container, Logout, Nav, Profile } from './styles';
 
 export default function Sidebar() {
-  return (
+return (
     <Container>
-      <div>
+    <div>
         <Nav>
-          <li>
-            <a href="#">Navegar</a>
-          </li>
-
-          <li>
-            <a href="#">Rádio</a>
-          </li>
+            <Profile>
+                <img src='https://api.adorable.io/avatars/50/abott@adorable.png' alt="Emanoel Johannes"/>
+                <div>
+                    <strong>Emanoel Johannes</strong>
+                    <Link to="/profile">Meu perfil</Link>
+                </div>                
+            </Profile>
         </Nav>
 
-      </div>
-      <Logout>
+        <Nav>
+            <li>
+                <Link to="/createEvent">Adicionar evento</Link>
+            </li>
+
+            <li>
+                <Link to="/profile">Listar Eventos</Link>
+            </li>
+
+            <li>
+                <Link to="/profile">Palestrantes</Link>
+            </li>
+
+            <li>
+                <Link to="/profile">Programação</Link>
+            </li>
+        </Nav>
+    </div>
+    <Logout>
         Sair
-      </Logout>
+    </Logout>
 
     </Container>
-  );
+);
 }

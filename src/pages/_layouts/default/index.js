@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper } from './styles';
+import { Wrapper, Content } from './styles';
 
 import Sidebar from '../../../components/Sidebar';
 
@@ -10,8 +10,9 @@ export default function DefaultLayout( {children} ) {
   return (
     <Wrapper> 
       <Sidebar />
-      {children}
-      
+      <Content>
+          {children}
+      </Content>         
     </Wrapper>
   );
 }
