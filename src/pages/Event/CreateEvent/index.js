@@ -16,7 +16,7 @@ const schema = Yup.object().shape({
     state: Yup.string().required('O estado é obrigatório'),
     city: Yup.string().required('A cidade é obrigatória'),
     local: Yup.string().required('O local é obrigatório'),
-    cep: Yup.string().min(8, 'Cep informado não é válido').required('O cep é obrigatório'),
+    cep: Yup.string().min(1, 'Cep informado não é válido').required('O cep é obrigatório'),
   });
 
 

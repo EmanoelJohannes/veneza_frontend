@@ -6,11 +6,10 @@ import { storeEventSuccess, storeEventFailure } from './actions';
 
 
 export function* storeEvent({payload}){
-    console.log("Entrou store event, payload.data ->",payload.data);
     try {
-        const response = yield call (api.post, 'storeEvent', payload.data);
+        const {title, subtitle, state, city, local} = payload;
 
-        console.log("Response -> ",response);
+        const response = yield call (api.post, 'storeEvent', {title, subtitle, state, city, local});
 
         toast.success('Evento criado com sucesso');
 
@@ -18,7 +17,7 @@ export function* storeEvent({payload}){
 
     } catch (err) {
         toast.error('Erro ao criar ao evento!');
-
+        console.tron.log(err, payload);
         yield put(storeEventFailure());
     }
 }

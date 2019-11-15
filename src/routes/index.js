@@ -10,6 +10,7 @@ import Dashboard from '../pages/Dashboard';
 
 //Event
 import CreateEvent from '../pages/Event/CreateEvent';
+import ListEvent from '../pages/Event/ListEvent';
 
 
 export default function Routes() {
@@ -21,6 +22,7 @@ export default function Routes() {
 
             <Route path="/dashboard" component={Dashboard} isPrivate></Route>
             <Route path="/profile" component={Profile} isPrivate></Route>
+            <Route path="/events" component={ListEvent} isPrivate></Route>
 
             <Route path="/createEvent" component={CreateEvent} isPrivate></Route>
             <Route path="/" component={() => <h1>404 not found</h1>} />
