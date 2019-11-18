@@ -31,11 +31,11 @@ export default function Sidebar() {
                 </li>
 
                 <li>
-                    <Link to="/">Palestrantes</Link>
+                    <Link to="/speakers">Palestrantes</Link>
                 </li>
 
                 <li>
-                    <Link to="/">Programação</Link>
+                    <Link to="/eventSchedules">Programação</Link>
                 </li>
             </Nav>
         </div>

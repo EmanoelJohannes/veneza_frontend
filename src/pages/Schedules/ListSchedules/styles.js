@@ -25,13 +25,6 @@ export const Container = styled.div`
         border-bottom: 1px solid red;
     }
 
-    .react-datepicker-wrapper {
-        display: inline-block;
-        padding: 0;
-        border: 0;
-        width: 100% !important;
-    }
-
     tr {
         text-align: center;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {format, parseISO} from 'date-fns';
+import {Link} from 'react-router-dom';
 import pt from 'date-fns/locale/pt';
 import {Table, Button} from 'react-bootstrap';
 
@@ -38,9 +39,6 @@ export default function ListEvents() {
                     <thead>
                         <tr>
                             <th>Evento</th>
-                            <th>Auto Confirmação</th>
-                            <th>Data</th>
-                            <th>Cadastrados</th>
                             <th>Status</th>
                             <th>Ação</th>
                         </tr>
@@ -48,12 +46,9 @@ export default function ListEvents() {
                     <tbody>
                         {events.map(event => (
                             <tr key={event.id}>
-                                <td> {event.title} </td>
-                                <td> {event.need_confirm_before === false ? 'Não' : 'Sim'} </td>
-                                <td> {event.createFormatted} </td>    
+                                <td> {event.title} </td>  
                                 <td> null </td>
-                                <td> Falta criar </td>
-                                <td> <Button variant="primary">Editar</Button> </td>
+                                <td> <Link to={`/schedules/${event.id}`}> <Button variant="primary">Adicionar programação</Button> </Link> </td>
                             </tr>
                         ))}
                     </tbody>

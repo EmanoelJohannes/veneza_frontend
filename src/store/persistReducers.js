@@ -5,7 +5,7 @@ export default reducers => {
     const persistedReducer = persistReducer({
         key: 'veneza',
         storage,
-        whitelist: ['auth', 'user', 'event'],
+        whitelist: ['auth', 'user', 'event', 'speaker'],
     }, reducers);
 
     return persistedReducer;

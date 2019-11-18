@@ -8,4 +8,6 @@ yup
 redux redux-saga react-redux reactotron-redux reactotron-redux-saga immer
 axios
 redux-persist
+date-fns
+date-fns@next
 react-toastify (erros)

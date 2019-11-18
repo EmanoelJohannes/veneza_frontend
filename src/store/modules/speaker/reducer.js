@@ -4,20 +4,20 @@ const INITIAL_STATE = {
     loading: false
 };
 
-export default function event (state = INITIAL_STATE, action){
+export default function speaker (state = INITIAL_STATE, action){
     return produce(state, draft => {
         switch (action.type) {
-            case '@event/STORE_EVENT_REQUEST': {
+            case '@speaker/STORE_SPEAKER_REQUEST': {
                 draft.loading = true;
                 break;
             }
 
-            case '@event/STORE_EVENT_SUCCESS': {
+            case '@speaker/STORE_SPEAKER_SUCCESS': {
                 draft.loading = false;
                 break;
             }
 
-            case '@event/STORE_EVENT_FAILURE': {
+            case '@speaker/STORE_SPEAKER_FAILURE': {
                 draft.loading = false;
                 break; 
             }

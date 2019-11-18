@@ -7,9 +7,9 @@ import { storeEventSuccess, storeEventFailure } from './actions';
 
 export function* storeEvent({payload}){
     try {
-        const {title, subtitle, state, city, local} = payload;
+        const {title, subtitle, state, city, local, cep, begin, end} = payload;
 
-        const response = yield call (api.post, 'storeEvent', {title, subtitle, state, city, local});
+        const response = yield call (api.post, 'storeEvent', {title, subtitle, state, city, local, cep, begin, end});
 
         toast.success('Evento criado com sucesso');
 

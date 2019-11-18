@@ -4,10 +4,22 @@ export const Container = styled.div`
     padding: 30px;
     color: white;
 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
     h1 {
         margin-bottom: 30px;
         font-size: 24px;
         color: rgba(0, 0, 0, 0.8);
+    }
+
+    button {
+        height: auto;
     }
 
     table {
@@ -23,13 +35,6 @@ export const Container = styled.div`
         text-align: center;
         font-weight: 600;
         border-bottom: 1px solid red;
-    }
-
-    .react-datepicker-wrapper {
-        display: inline-block;
-        padding: 0;
-        border: 0;
-        width: 100% !important;
     }
 
     tr {
@@ -49,8 +54,6 @@ export const Container = styled.div`
     td{
         font-size: 14px;
         vertical-align: bottom;
-        min-width: 100px;
-        max-width: 400px;
     }
 
     .box {

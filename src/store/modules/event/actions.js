@@ -1,7 +1,7 @@
-export function storeEventRequest(title, subtitle, state, city, local, cep) {
+export function storeEventRequest(title, subtitle, state, city, local, cep, begin, end) {
     return {
         type: '@event/STORE_EVENT_REQUEST',
-        payload: { title, subtitle, state, city, local, cep },
+        payload: { title, subtitle, state, city, local, cep, begin, end },
     };
 }
 
